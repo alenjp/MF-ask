@@ -1,0 +1,1283 @@
+==============================================================================
+RAG CHUNK DUMP - HDFC Mutual Fund FAQ corpus
+chunks: 36   model: sentence-transformers/all-MiniLM-L6-v2
+chunk chars: 900   overlap: 140 (block granular)
+==============================================================================
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#1
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Fees: expense ratio
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 233
+------------------------------------------------------------------------------
+HDFC Balanced Advantage Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+
++10.39
+
+3Y annualised
+
+-1.20
+
+All
+
+NAV: 28 Sep '26
+
+₹551.04
+
+Min. for SIP
+
+₹100
+
+Fund size (AUM)
+
+₹1,07,295.79 Cr
+
+Expense ratio
+
+0.78%
+
+Rating
+
+5
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#2
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Minimum investments
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 80
+------------------------------------------------------------------------------
+Min. for 1st investment
+
+₹100
+
+Min. for 2nd investment
+
+₹100
+
+Min. for SIP
+
+₹100
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#3
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Glossary (Understand terms)
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 161
+------------------------------------------------------------------------------
+Annualised returns
+
+Average of the yearly returns of a mutual fund over a given period.
+
+Absolute returns
+
+The total return of a mutual fund over a given period.
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#4
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Exit load & charges
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 635
+------------------------------------------------------------------------------
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+
+Stamp duty
+
+A form of tax payable for the purchase or sale of an asset or security.
+
+01 Jun 2018
+
+Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.
+
+08 May 2015
+
+Exit load of 1% if redeemed within 1 year
+
+18 Dec 2014
+
+Exit load of 2% if redeemed within 12 months, 1% if redeemed after 12 months but within 24 months and 0.50% if redeemed after 24 months but within 36 months
+
+01 Jan 2013
+
+Exit load of 1% if redeemed within 1 year
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#5
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Exit load, stamp duty & tax
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 790
+------------------------------------------------------------------------------
+Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.
+
+Stamp duty on investment:
+
+0.005% (from July 1st, 2020)
+
+from July 1st 2020
+
+Tax implication
+
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+
+Check past data
+
+Name
+
+Fund Size(Cr)
+
+Aditya Birla Sun Life Balanced Advantage Fund Direct Growth
+
++6.01%
+
++11.25%
+
+10,125.44
+
+ICICI Prudential Balanced Advantage Direct Growth
+
++3.03%
+
++10.52%
+
+75,399.17
+
+HDFC Balanced Advantage Fund Direct Growth
+
+-1.15%
+
++10.39%
+
+1,07,295.79
+
+Nippon India Balanced Advantage Fund Direct Growth
+
++2.34%
+
++10.05%
+
+9,917.50
+
+DSP Dynamic Asset Allocation Fund Direct Growth
+
++2.96%
+
++9.93%
+
+3,821.11
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#6
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 873
+------------------------------------------------------------------------------
+HDFC Balanced Advantage Fund Direct Growth
+
+HDFC Balanced Advantage Fund Direct Growth is a Hybrid Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Anil Bamboli is the Current Fund Manager of HDFC Balanced Advantage Fund Direct Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹551.04.
+
+The HDFC Balanced Advantage Fund Direct Growth is rated Very High risk. Minimum SIP Investment is set to ₹100. Minimum Lumpsum Investment is ₹100. Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.
+
+Investment Objective
+
+The Scheme seeks to provide long term capital appreciation / income from a dynamic mix of equity and debt investments.
+
+Fund benchmark
+
+NIFTY 50 Hybrid Composite Debt 50:50 Index
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#7
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 92
+------------------------------------------------------------------------------
+Fund benchmark
+
+NIFTY 50 Hybrid Composite Debt 50:50 Index
+
+Scheme Information Document(SID)
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Balanced Advantage Fund (Direct Growth)#8
+scheme    : HDFC Balanced Advantage Fund (Direct Growth)
+category  : Hybrid - Balanced Advantage  |  plan: Direct Growth
+section   : Fund house
+url       : https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+n_chars   : 677
+------------------------------------------------------------------------------
+Rank (total assets)
+
+#2 in India
+
+Total AUM
+
+₹9,86,236.84 Cr
+
+Date of Incorporation
+
+10 Dec 1999
+
+Phone
+
+022 – 66316333
+
+E-mail
+
+[email protected]
+
+Website
+
+http://www.hdfcfund.com
+
+Launch Date
+
+10 Dec 1999
+
+Address
+
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+
+Custodian
+
+HDFC Bank
+
+Registrar & Transfer Agent
+
+Cams
+
+Email
+
+[email protected]
+
+Website
+
+www.camsonline.com
+
+Address
+
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+
+Home
+
+Mutual Funds
+
+HDFC Mutual Fund
+
+HDFC Balanced Advantage Fund Direct Growth
+
+Vaishnavi Tech Park, South Tower, 3rd Floor
+
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+
+Karnataka
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#1
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Fees: expense ratio
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 234
+------------------------------------------------------------------------------
+HDFC ELSS Tax Saver Fund Direct Plan Growth - NAV, Mutual Fund Performance & Portfolio
+
++11.93
+
+3Y annualised
+
+-1.41
+
+All
+
+NAV: 28 Sep '26
+
+₹1,426.93
+
+Min. for SIP
+
+₹500
+
+Fund size (AUM)
+
+₹15,991.78 Cr
+
+Expense ratio
+
+1.21%
+
+Rating
+
+5
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#2
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Minimum investments
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 80
+------------------------------------------------------------------------------
+Min. for 1st investment
+
+₹500
+
+Min. for 2nd investment
+
+₹500
+
+Min. for SIP
+
+₹500
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#3
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Glossary (Understand terms)
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 161
+------------------------------------------------------------------------------
+Annualised returns
+
+Average of the yearly returns of a mutual fund over a given period.
+
+Absolute returns
+
+The total return of a mutual fund over a given period.
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#4
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Exit load & charges
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 247
+------------------------------------------------------------------------------
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+
+Stamp duty
+
+A form of tax payable for the purchase or sale of an asset or security.
+
+01 Jan 2013
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#5
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Exit load, stamp duty & tax
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 273
+------------------------------------------------------------------------------
+Nil
+
+Stamp duty on investment:
+
+0.005% (from July 1st, 2020)
+
+from July 1st 2020
+
+Tax implication
+
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+
+Check past data
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#6
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 823
+------------------------------------------------------------------------------
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+
+HDFC ELSS Tax Saver Fund Direct Plan Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Amar Kalkundrikar is the Current Fund Manager of HDFC ELSS Tax Saver Fund Direct Plan Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹1,426.93.
+
+The HDFC ELSS Tax Saver Fund Direct Plan Growth is rated Very High risk. Minimum SIP Investment is set to ₹500. Minimum Lumpsum Investment is ₹500.
+
+Investment Objective
+
+The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments.
+
+Fund benchmark
+
+NIFTY 500 Total Return Index
+
+Scheme Information Document(SID)
+
+------------------------------------------------------------------------------
+chunk_id : HDFC ELSS Tax Saver Fund (Direct Plan Growth)#7
+scheme    : HDFC ELSS Tax Saver Fund (Direct Plan Growth)
+category  : ELSS  |  plan: Direct Plan Growth
+section   : Fund house
+url       : https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+n_chars   : 682
+------------------------------------------------------------------------------
+Rank (total assets)
+
+#2 in India
+
+Total AUM
+
+₹9,86,236.84 Cr
+
+Date of Incorporation
+
+10 Dec 1999
+
+Phone
+
+022 – 66316333
+
+E-mail
+
+[email protected]
+
+Website
+
+http://www.hdfcfund.com
+
+Launch Date
+
+10 Dec 1999
+
+Address
+
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+
+Custodian
+
+Deutsche Bank
+
+Registrar & Transfer Agent
+
+Cams
+
+Email
+
+[email protected]
+
+Website
+
+www.camsonline.com
+
+Address
+
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+
+Home
+
+Mutual Funds
+
+HDFC Mutual Fund
+
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+
+Vaishnavi Tech Park, South Tower, 3rd Floor
+
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+
+Karnataka
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#1
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Fees: expense ratio
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 226
+------------------------------------------------------------------------------
+HDFC Flexi Cap Direct Plan Growth - NAV, Mutual Fund Performance & Portfolio
+
++14.84
+
+3Y annualised
+
+-1.51
+
+All
+
+NAV: 28 Sep '26
+
+₹2,181.07
+
+Min. for SIP
+
+₹100
+
+Fund size (AUM)
+
+₹1,13,606.46 Cr
+
+Expense ratio
+
+0.77%
+
+Rating
+
+5
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#2
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Minimum investments
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 80
+------------------------------------------------------------------------------
+Min. for 1st investment
+
+₹100
+
+Min. for 2nd investment
+
+₹100
+
+Min. for SIP
+
+₹100
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#3
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Glossary (Understand terms)
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 161
+------------------------------------------------------------------------------
+Annualised returns
+
+Average of the yearly returns of a mutual fund over a given period.
+
+Absolute returns
+
+The total return of a mutual fund over a given period.
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#4
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Exit load & charges
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 290
+------------------------------------------------------------------------------
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+
+Stamp duty
+
+A form of tax payable for the purchase or sale of an asset or security.
+
+01 Jan 2013
+
+Exit load of 1% if redeemed within 1 year
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#5
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Exit load, stamp duty & tax
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 665
+------------------------------------------------------------------------------
+Exit load of 1% if redeemed within 1 year
+
+Stamp duty on investment:
+
+0.005% (from July 1st, 2020)
+
+from July 1st 2020
+
+Tax implication
+
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+
+Check past data
+
+Name
+
+Fund Size(Cr)
+
+Bank of India Flexi Cap Fund Direct Growth
+
++11.56%
+
++18.54%
+
+2,952.99
+
+ITI Flexi Cap Fund Direct Growth
+
++13.40%
+
++18.27%
+
+1,588.12
+
+HSBC Flexi Cap Fund Direct Growth
+
++6.32%
+
++14.86%
+
+5,999.66
+
+HDFC Flexi Cap Direct Plan Growth
+
+-0.78%
+
++14.84%
+
+1,13,606.46
+
+Franklin India Flexi Cap Fund Direct Growth
+
+-3.97%
+
++9.94%
+
+19,384.81
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#6
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 819
+------------------------------------------------------------------------------
+HDFC Flexi Cap Direct Plan Growth
+
+HDFC Flexi Cap Direct Plan Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Dhruv Muchhal is the Current Fund Manager of HDFC Flexi Cap Direct Plan Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹2,181.07.
+
+The HDFC Flexi Cap Direct Plan Growth is rated Very High risk. Minimum SIP Investment is set to ₹100. Minimum Lumpsum Investment is ₹100. Exit load of 1% if redeemed within 1 year
+
+Investment Objective
+
+The scheme seeks to generate capital appreciation / income from a portfolio, predominantly invested in equity & equity related instruments.
+
+Fund benchmark
+
+NIFTY 500 Total Return Index
+
+Scheme Information Document(SID)
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Flexi Cap Fund (Direct Growth)#7
+scheme    : HDFC Flexi Cap Fund (Direct Growth)
+category  : Flexi Cap  |  plan: Direct Growth
+section   : Fund house
+url       : https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+n_chars   : 672
+------------------------------------------------------------------------------
+Rank (total assets)
+
+#2 in India
+
+Total AUM
+
+₹9,86,236.84 Cr
+
+Date of Incorporation
+
+10 Dec 1999
+
+Phone
+
+022 – 66316333
+
+E-mail
+
+[email protected]
+
+Website
+
+http://www.hdfcfund.com
+
+Launch Date
+
+10 Dec 1999
+
+Address
+
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+
+Custodian
+
+Deutsche Bank
+
+Registrar & Transfer Agent
+
+Cams
+
+Email
+
+[email protected]
+
+Website
+
+www.camsonline.com
+
+Address
+
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+
+Home
+
+Mutual Funds
+
+HDFC Mutual Fund
+
+HDFC Flexi Cap Direct Plan Growth
+
+Vaishnavi Tech Park, South Tower, 3rd Floor
+
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+
+Karnataka
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#1
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Fees: expense ratio
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 223
+------------------------------------------------------------------------------
+HDFC Large Cap Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+
++7.99
+
+3Y annualised
+
+-1.60
+
+All
+
+NAV: 28 Sep '26
+
+₹1,170.11
+
+Min. for SIP
+
+₹100
+
+Fund size (AUM)
+
+₹39,933.36 Cr
+
+Expense ratio
+
+1.03%
+
+Rating
+
+4
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#2
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Minimum investments
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 80
+------------------------------------------------------------------------------
+Min. for 1st investment
+
+₹100
+
+Min. for 2nd investment
+
+₹100
+
+Min. for SIP
+
+₹100
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#3
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Glossary (Understand terms)
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 161
+------------------------------------------------------------------------------
+Annualised returns
+
+Average of the yearly returns of a mutual fund over a given period.
+
+Absolute returns
+
+The total return of a mutual fund over a given period.
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#4
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Exit load & charges
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 405
+------------------------------------------------------------------------------
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+
+Stamp duty
+
+A form of tax payable for the purchase or sale of an asset or security.
+
+08 May 2015
+
+Exit load of 1% if redeemed within 1 year
+
+16 Feb 2015
+
+Exit load of 1% if redeemed within 18 months
+
+01 Jan 2013
+
+Exit load of 1% if redeemed within 1 year
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#5
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Exit load, stamp duty & tax
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 675
+------------------------------------------------------------------------------
+Exit load of 1% if redeemed within 1 year
+
+Stamp duty on investment:
+
+0.005% (from July 1st, 2020)
+
+from July 1st 2020
+
+Tax implication
+
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+
+Check past data
+
+Name
+
+Fund Size(Cr)
+
+Invesco India Large Cap Fund Direct Growth
+
++2.57%
+
++13.09%
+
+2,020.76
+
+Bandhan Large Cap Fund Direct Growth
+
+-0.25%
+
++11.78%
+
+2,179.99
+
+Nippon India Large Cap Fund Direct Growth
+
+-4.96%
+
++10.02%
+
+54,133.66
+
+ICICI Prudential Large Cap Fund Direct Growth
+
+-5.79%
+
++9.73%
+
+80,206.20
+
+HDFC Large Cap Fund Direct Growth
+
+-3.71%
+
++7.99%
+
+39,933.36
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#6
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 795
+------------------------------------------------------------------------------
+HDFC Large Cap Fund Direct Growth
+
+HDFC Large Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Rahul Baijal is the Current Fund Manager of HDFC Large Cap Fund Direct Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹1,170.11.
+
+The HDFC Large Cap Fund Direct Growth is rated Very High risk. Minimum SIP Investment is set to ₹100. Minimum Lumpsum Investment is ₹100. Exit load of 1% if redeemed within 1 year
+
+Investment Objective
+
+The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies.
+
+Fund benchmark
+
+NIFTY 100 Total Return Index
+
+Scheme Information Document(SID)
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Large Cap Fund (Direct Growth)#7
+scheme    : HDFC Large Cap Fund (Direct Growth)
+category  : Large Cap  |  plan: Direct Growth
+section   : Fund house
+url       : https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+n_chars   : 668
+------------------------------------------------------------------------------
+Rank (total assets)
+
+#2 in India
+
+Total AUM
+
+₹9,86,236.84 Cr
+
+Date of Incorporation
+
+10 Dec 1999
+
+Phone
+
+022 – 66316333
+
+E-mail
+
+[email protected]
+
+Website
+
+http://www.hdfcfund.com
+
+Launch Date
+
+10 Dec 1999
+
+Address
+
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+
+Custodian
+
+HDFC Bank
+
+Registrar & Transfer Agent
+
+Cams
+
+Email
+
+[email protected]
+
+Website
+
+www.camsonline.com
+
+Address
+
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+
+Home
+
+Mutual Funds
+
+HDFC Mutual Fund
+
+HDFC Large Cap Fund Direct Growth
+
+Vaishnavi Tech Park, South Tower, 3rd Floor
+
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+
+Karnataka
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#1
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Fees: expense ratio
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 222
+------------------------------------------------------------------------------
+HDFC Small Cap Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+
++10.27
+
+3Y annualised
+
+-1.60
+
+All
+
+NAV: 28 Sep '26
+
+₹157.26
+
+Min. for SIP
+
+₹100
+
+Fund size (AUM)
+
+₹41,890.86 Cr
+
+Expense ratio
+
+0.78%
+
+Rating
+
+3
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#2
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Minimum investments
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 80
+------------------------------------------------------------------------------
+Min. for 1st investment
+
+₹100
+
+Min. for 2nd investment
+
+₹100
+
+Min. for SIP
+
+₹100
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#3
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Glossary (Understand terms)
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 161
+------------------------------------------------------------------------------
+Annualised returns
+
+Average of the yearly returns of a mutual fund over a given period.
+
+Absolute returns
+
+The total return of a mutual fund over a given period.
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#4
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Exit load & charges
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 632
+------------------------------------------------------------------------------
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+
+Stamp duty
+
+A form of tax payable for the purchase or sale of an asset or security.
+
+08 May 2015
+
+Exit load of 1% if redeemed within 1 year
+
+18 Dec 2014
+
+Exit load of 2% if redeemed within 12 months, 1% if redeemed after 12 months but within 24 months and 0.50% if redeemed after 24 months but within 36 months
+
+01 Jul 2014
+
+Exit load of 2% if redeemed within 12 months and 1% if redeemed after 12 months but before 18 months
+
+01 Jan 2013
+
+Exit load of 1% if redeemed within 1 year
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#5
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Exit load, stamp duty & tax
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 672
+------------------------------------------------------------------------------
+Exit load of 1% if redeemed within 1 year
+
+Stamp duty on investment:
+
+0.005% (from July 1st, 2020)
+
+from July 1st 2020
+
+Tax implication
+
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+
+Check past data
+
+Name
+
+Fund Size(Cr)
+
+Bandhan Small Cap Fund Direct Growth
+
++12.83%
+
++24.09%
+
+34,176.02
+
+ITI Small Cap Fund Direct Growth
+
++22.22%
+
++23.94%
+
+3,602.84
+
+Invesco India Small Cap Fund Direct Growth
+
++17.70%
+
++22.53%
+
+15,744.40
+
+Sundaram Small Cap Fund Direct Growth
+
++15.30%
+
++16.23%
+
+4,155.35
+
+Nippon India Small Cap Fund Direct Growth
+
++9.67%
+
++14.74%
+
+82,580.30
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#6
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : About the scheme
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 802
+------------------------------------------------------------------------------
+HDFC Small Cap Fund Direct Growth
+
+HDFC Small Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Dhruv Muchhal is the Current Fund Manager of HDFC Small Cap Fund Direct Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹157.26.
+
+The HDFC Small Cap Fund Direct Growth is rated Very High risk. Minimum SIP Investment is set to ₹100. Minimum Lumpsum Investment is ₹100. Exit load of 1% if redeemed within 1 year
+
+Investment Objective
+
+The scheme seeks to provide long-term capital appreciation /income by investing predominantly in Small-Cap companies.
+
+Fund benchmark
+
+BSE 250 SmallCap Total Return Index
+
+Scheme Information Document(SID)
+
+------------------------------------------------------------------------------
+chunk_id : HDFC Small Cap Fund (Direct Growth)#7
+scheme    : HDFC Small Cap Fund (Direct Growth)
+category  : Small Cap  |  plan: Direct Growth
+section   : Fund house
+url       : https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+n_chars   : 670
+------------------------------------------------------------------------------
+Rank (total assets)
+
+#2 in India
+
+Total AUM
+
+₹9,86,236.84 Cr
+
+Date of Incorporation
+
+10 Dec 1999
+
+Phone
+
+022 – 66316333
+
+E-mail
+
+[email protected]
+
+Website
+
+http://www.hdfcfund.com
+
+Launch Date
+
+10 Dec 1999
+
+Address
+
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+
+Custodian
+
+Citibank NA
+
+Registrar & Transfer Agent
+
+Cams
+
+Email
+
+[email protected]
+
+Website
+
+www.camsonline.com
+
+Address
+
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+
+Home
+
+Mutual Funds
+
+HDFC Mutual Fund
+
+HDFC Small Cap Fund Direct Growth
+
+Vaishnavi Tech Park, South Tower, 3rd Floor
+
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+
+Karnataka
