@@ -33,7 +33,7 @@ Sample Q&A is [`SAMPLE_QA.md`](SAMPLE_QA.md). Disclaimer: [`DISCLAIMER.md`](DISC
 |-------|--------|
 | Embedding | `sentence-transformers/all-MiniLM-L6-v2` — local, 384-dim, no API key. Same model encodes chunks and questions. |
 | Vector DB | ChromaDB, `PersistentClient` persisted to `data/chroma/` — ingest runs once, not on every restart. |
-| LLM | Groq (`llama-3.3-70b-versatile`, temperature 0.0), key in `.env`, `.env` is git-ignored. |
+| LLM | Groq (`qwen/qwen3.8-27b`, temperature 0.0), key in `.env`, `.env` is git-ignored. |
 | UI | Streamlit |
 
 No orchestration framework — the pipeline is ~200 lines of plain Python in
@@ -50,6 +50,18 @@ pip install -r requirements.txt
 
 Copy-Item .env.example .env     # then paste your Groq key into .env
 ```
+
+> **Check which interpreter you got.** This project was built and tested on
+> **Python 3.12**. If `python --version` reports 3.13/3.14, either recreate the
+> venv with 3.12 or install into that interpreter explicitly —
+> `py -3.12 -m venv .venv`. `chromadb` and `sentence-transformers` pull in
+> compiled wheels (tokenizers, onnxruntime, hnswlib) that are not published for
+> every version, so a mismatched interpreter fails at `import` rather than at
+> install time. Verify with:
+> `python -c "import chromadb, sentence_transformers, groq, streamlit, dotenv; print('ok')"`
+
+`GROQ_MODEL` is set in `.env` (currently `qwen/qwen3.8-27b`). Any chat model your
+Groq key can reach will work; temperature is pinned to `0.0`.
 
 ## 4. Run
 
@@ -146,7 +158,7 @@ Decisions:
 | Overlap | **140 characters**, block-granular | re-emits the *last whole lines* of the previous chunk, so overlap never cuts mid-label |
 | Boundary | detected headings flush the buffer | each chunk is one readable section |
 | Dropped | Holdings, Return calculator, Returns/rankings, Compare-similar, Fund-management link lists | out of scope; keeping them let 87/132 chunks be portfolio noise that crowded out the fee facts |
-| Embedded text | `"<section> — <scheme>: <body>"` | every raw chunk repeats the scheme name, so *"HDFC ... Fund"* dominated the cosine score and buried the section term the user actually asked about. The header puts the question-relevant words first. Body + citation unchanged |
+| Embedded text | `"<section> — <scheme>: <body>"`, stored **and** embedded | every raw chunk repeats the scheme name, so *"HDFC ... Fund"* dominated the cosine score and buried the section term. Storing the same string (not just embedding it) also stops the model reading a bare label/value list and answering "not stated" with the fact right in front of it |
 | Metadata per chunk | `chunk_id, source_url, scheme, category, plan, section, n_chars, retrieved_on` | every chunk is independently citable back to exactly one URL |
 
 Result: **36 chunks** across 5 documents, sections labelled *Fees: expense
@@ -163,6 +175,7 @@ objective*, *Key facts*, *Fund house*. Inspect them in `data/chunks.txt`.
 | **No advice** | "should I buy", "which fund is best", "recommend", "book profit", "exit my investment", … | Polite facts-only message + an educational link. Retrieval is never even run. |
 | **No performance claims** | "5 year returns vs category", "expected return", "CAGR", "outperform", "how much will I make" | Refuses, points at the official factsheet/fund page. The app never computes or compares returns. |
 | **Grounding** | top-1 cosine < `MIN_SIM` (0.22) | "I don't have that in my 5 indexed HDFC scheme pages." |
+| **Scheme scoping** | the question names one scheme | Retrieval is filtered to that scheme's chunks, so HDFC Small Cap's exit load is never answered from HDFC Large Cap's identically-worded block |
 | **Output check** | the generated answer itself trips an advice/performance regex | Replaced with a facts-only message. |
 | **Length** | any answer | Hard-capped at **3 sentences** by `_trim_sentences`. |
 | **Citation** | every factual answer | Exactly one primary source link rendered under the answer. |

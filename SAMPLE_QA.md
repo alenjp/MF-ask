@@ -31,7 +31,7 @@ Corpus: 5 public HDFC Mutual Fund scheme pages (see `sources.csv`), 36 chunks. L
 
 ### `What is the benchmark of HDFC Flexi Cap Fund Direct Growth?`
 
-**Answer (answer):** The fund benchmark for HDFC Flexi Cap Direct Plan Growth is the NIFTY 500 Total Return Index.
+**Answer (answer):** The benchmark for HDFC Flexi Cap Fund Direct Growth is the NIFTY 500 Total Return Index.
 
 **Source:** [HDFC Flexi Cap Fund (Direct Growth) - About the scheme](https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth)
 

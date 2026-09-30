@@ -61,7 +61,7 @@ def main() -> int:
     out = [
         "# Sample Q&A - HDFC Mutual Fund FAQ Assistant (RAG)",
         "",
-        f"Model: Groq `{os.getenv('GROQ_MODEL', 'llama-3.3-70b-versatile')}` · "
+        f"Model: Groq `{os.getenv('GROQ_MODEL', 'qwen/qwen3.8-27b')}` · "
         "Embeddings: sentence-transformers/all-MiniLM-L6-v2 · Vector DB: ChromaDB (on disk)",
         "",
         "Corpus: 5 public HDFC Mutual Fund scheme pages (see `sources.csv`), 36 chunks. "

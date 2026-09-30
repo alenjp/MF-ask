@@ -65,17 +65,26 @@ idempotent and skips when the collection is already populated.
 
 | Module | RAG stage | Responsibility | Key exports |
 |--------|-----------|----------------|-------------|
-| `app/config.py` | — | Paths, model names, thresholds, scheme aliases, system prompt, disclaimer | `EMBED_MODEL`, `TOP_K`, `SCHEME_ALIASES`, `SYSTEM_PROMPT`, `DISCLAIMER` |
+| `app/config.py` | — | Paths, model names, thresholds, chunk sizes, scheme aliases, user-facing copy | `EMBED_MODEL`, `GROQ_MODEL`, `TOP_K`, `TOP_K_GENERIC`, `MIN_SIM`, `CHUNK_CHARS`, `MAX_SENTENCES`, `SCHEME_ALIASES`, `NON_CITABLE_SECTIONS`, `DISCLAIMER`, `NO_ADVICE_REPLY` |
 | `app/fetch_sources.py` | **LOAD** | Fetch the 5 URLs from `sources.csv`, strip nav/footer/boilerplate | `extract`, `slug` |
 | `app/chunking.py` | **CHUNK** | Line-granular, section-aware packing; metadata; `.txt` dump | `chunk_document`, `build_all_chunks`, `dump_chunks` |
 | `app/ingest.py` | **EMBED + STORE** | Encode with MiniLM, upsert into persistent Chroma, idempotency check | `get_model`, `get_client`, `ingest` |
-| `app/rag.py` | **GUARD / RETRIEVE / GENERATE** | All three guards, retrieval, prompt assembly, LLM call, citation, answer shaping | `ask`, `retrieve`, `detect_scheme`, `best_citation` |
+| `app/rag.py` | **GUARD / RETRIEVE / GENERATE** | All three guards, retrieval, prompt assembly, LLM call, citation, answer shaping | `ask`, `retrieve`, `detect_scheme`, `best_citation`, `SYSTEM_PROMPT` |
 | `app/app.py` | **PRESENT** | Streamlit chat UI, sidebar status, expander of retrieved context | — |
 | `app/evaluate.py` | — | 12-query smoke test, regenerates `SAMPLE_QA.md` | `main` |
-| `app/fetch_sources.py`→`sources.csv` | — | Source-of-record for URLs and retrieval date | — |
+| `sources.csv` | — | Source-of-record for the 5 URLs and the retrieval date | — |
+
+`SYSTEM_PROMPT` lives in `rag.py` rather than `config.py` on purpose: it is
+composed from `config.DISCLAIMER` and interleaved with the guard behaviour it
+has to agree with, so the two cannot drift apart.
 
 Dependencies flow one way: `config` ← `chunking` ← `ingest` ← `rag` ← `app`.
 `rag` never writes to disk.
+
+**Runtime note:** this project was built on **Python 3.12**. `chromadb` and
+`sentence-transformers` depend on compiled wheels that are not published for
+every interpreter, so a mismatched `python` on `PATH` fails at import time with
+a confusing error rather than at install time. See `README.md` §3.
 
 ## 3. Ingestion design
 
@@ -112,23 +121,44 @@ data actually looks like:
 | Metadata | `chunk_id, source_url, scheme, category, plan, section, n_chars, retrieved_on` | Every chunk is independently citable back to exactly one URL — the citation is metadata-driven, so the model can never invent one. |
 | Auditability | `data/chunks.txt` | Every chunk with its metadata, human-readable, written **before** embedding. |
 
-### 3.3 Two chunking decisions that were made by testing, not theory
+### 3.3 Three chunking decisions that were made by testing, not theory
 
-Both were caught by running real queries against the index, not by inspection.
+All three were caught by running real queries against the index and reading the
+output, not by staring at the chunker.
 
 1. **700 → 900 characters.** At 700, each scheme's *About the scheme* section split
    in two, orphaning the benchmark line into a chunk that never ranked in the top
    5 for "What is the benchmark of …?". At 900 the whole block (objective + risk +
    minimums + benchmark) stays together and the query retrieves it.
 
-2. **Embedded text gets a header.** Every raw chunk repeats the scheme name, so
-   cosine similarity was dominated by *"HDFC … Fund"* matching and the section
-   term the user actually asked about was buried. The chunk embedded is
-   `"<section> — <scheme>: <body>"`; the stored document and the citation are
-   unchanged, only the embedded representation differs. This moved "exit load"
-   and "benchmark" questions from wrong to correct.
+2. **Sub-headings must not demote the parent section.** These pages repeat a bare
+   parent heading *inside* a sub-section — `Exit load`, then
+   `Exit load, stamp duty and tax`, then `Exit load` **again**. The last one
+   reset the section, so all five schemes' stamp-duty blocks were labelled
+   `Exit load & charges` and lost "stamp duty" from the embedded header, which is
+   exactly the term the user types. Fixed by tracking the raw heading *key* and
+   ignoring a heading that is a prefix of the current one. All five now carry an
+   `Exit load, stamp duty & tax` block.
 
-Result: **36 chunks** across 5 documents.
+3. **Store what you embed, not just the vector.** Every raw chunk repeats the
+   scheme name, so cosine similarity was dominated by *"HDFC … Fund"* matching and
+   the section term the user asked about was buried. The fix is to prefix
+   `"<section> — <scheme>: "`.
+
+   The subtlety: prefixing **only the vector** fixed retrieval but left the model
+   reading a bare label/value list — `Nil` / `Stamp duty on investment:` /
+   `0.005% (from July 1st, 2020)` / `Tax implication: …` — with nothing telling it
+   what it was looking at. Asked "What is the stamp duty and tax implication on
+   redemption?" the model replied *"Not stated in the sources I have"* while the
+   fact sat in context block 1. Isolating it in a controlled call showed the same
+   chunk answered correctly with the header prefixed and refused without it.
+
+   So the prefixed string is stored as the Chroma `document` as well as embedded.
+   **What the LLM reads must match what we embedded** — otherwise retrieval and
+   generation disagree about what a chunk means.
+
+Result: **36 chunks** across 5 documents, and the stamp-duty question went from
+an empty retrieval to a correct answer citing the right scheme.
 
 ### 3.4 EMBED + STORE
 
@@ -202,10 +232,25 @@ for exactly this decision.
 
 ### 4.5 Prompt and answer assembly
 
-System prompt (in `config.SYSTEM_PROMPT`) forbids: outside knowledge, guessing
-numbers, advice, performance claims, adding a URL, and exceeding three
-sentences. Context blocks are labelled `[n] SOURCE: <scheme> | SECTION: <section>`
-so the model can attribute correctly.
+System prompt (in `config.SYSTEM_PROMPT`, 10 numbered rules) forbids: outside
+knowledge, guessing numbers, advice, performance claims, blending schemes,
+adding a URL, and exceeding three sentences. Context blocks are labelled
+`[n] SOURCE: <scheme> | SECTION: <section>` so the model can attribute correctly.
+
+One rule earns its own line because it was added in response to a failure:
+
+> **8.** If the question does **not** name a scheme but the context states the
+> fact for one or more schemes, answer anyway: name the scheme(s) you used, and if
+> the value is identical across them say it applies to all of them. Do NOT reply
+> "not stated" merely because no scheme was named. Reserve "not stated" for facts
+> that are genuinely absent from the context.
+
+Without it, a scheme-less question (*"What is the stamp duty and tax implication
+on redemption?"*) was treated as unanswerable and refused, even with the correct
+block at rank 1 — the model was hedging because five near-identical schemes were
+in context and it could not tell which one the question was about. Refusing is
+the right default, but an over-eager refusal on a fact we demonstrably have is
+just as bad as a hallucination.
 
 The answer text returned to the UI **contains no URL**. The link is rendered by
 the app from Chroma metadata. This is a structural guarantee that a
@@ -216,6 +261,8 @@ answer: it scopes to the top scheme, re-joins label/value pairs, ranks facts by
 lexical overlap with the question's content terms (plus a small synonym map:
 `riskometer → risk`, `charges → expense/load`, …), and quotes up to two verbatim.
 It is explicitly prefixed *"Extracted from the source — no LLM key configured"*.
+A fact with **zero** lexical link to the question is never quoted, which is how
+"lock-in period" correctly returns a miss rather than an unrelated risk line.
 Retrieval, chunking, embedding and all three guards work without a key; only
 generation is degraded. This is a demo affordance, not a product feature.
 

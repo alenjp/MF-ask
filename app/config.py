@@ -17,7 +17,7 @@ CHROMA_DIR = ROOT / "data" / "chroma"
 
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"  # 384-dim, local, no API key
 COLLECTION = "hdfc_mf_faq"
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
 GROQ_API_KEY_ENV = "GROQ_API_KEY"
 
 # --- retrieval ---------------------------------------------------------------
