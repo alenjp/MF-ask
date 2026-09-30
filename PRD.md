@@ -168,7 +168,7 @@ this prototype runs locally, which satisfies the brief for a classroom demo.
 |---|---|---|
 | Numbers go stale (NAV, AUM, expense ratio) | Freshness stamp on every answer; documented re-run (`fetch_sources.py` → `ingest.py`) | Mitigated, not solved — no scheduler |
 | Hallucinated fee number | Grounding, 3-sentence cap, one citation, "not stated" path, visible retrieved context | Mitigated |
-| Cross-scheme contamination (5 near-identical HDFC pages) | Scheme-scoped retrieval + a system-prompt rule to never blend schemes | Fixed — see `architecture.md` §6 |
+| Cross-scheme contamination (5 near-identical HDFC pages) | Scheme-scoped retrieval + a system-prompt rule to never blend schemes | Fixed — see `architecture.md` §4.3 |
 | Retrieval misses the right chunk (e.g. benchmark orphaned in a small chunk) | Chunk-size tuning validated against real queries; adaptive k | Fixed |
 | Advice creep | Input guard **and** output guard | Mitigated |
 | No API key at demo time | `.env.example`, visible key warning in sidebar, extractive no-key fallback | Mitigated |
