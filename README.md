@@ -230,3 +230,40 @@ configured"*. Add a key to `.env` and restart to get the real Groq answers.
 - No PII is accepted, processed, logged or persisted. The PII guard runs before
   the question is embedded or sent anywhere.
 - Chat history lives in the Streamlit session only and is not written to disk.
+
+## 11. Deploy to Render (Web Service)
+
+Blueprints → **New** → **Web Service** → connect this repo → set the following:
+
+| Setting | Value |
+|---|---|
+| **Name** | `mf-ask` (or anything) |
+| **Region** | any |
+| **Runtime** | Python (native) |
+| **Root Directory** | `.` (repo root — paths are resolved from the app files, not the CWD) |
+| **Build Command** | `pip install -r requirements.txt && python app/ingest.py --rebuild` |
+| **Start Command** | `streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0` |
+| **Health Check Path** | `/` (leave default) |
+| **Instance Type** | Free is fine for the demo |
+
+**Environment variables** (Settings → Environment → Add):
+
+| Key | Value | Notes |
+|---|---|---|
+| `GROQ_API_KEY` | `<value from your local .env>` | Required — `.env` is git-ignored, so Render has it only via this dashboard entry; without it the app renders but can't answer |
+| `GROQ_MODEL` | `qwen/qwen3.8-27b` | Same as the local default; set explicitly for clarity |
+| `PYTHON_VERSION` | `3.12` | Pin it — newer runtimes broke this app's dependencies |
+| `PYTHONUNBUFFERED` | `1` | Optional; makes Render logs flush live |
+
+How the pieces work on Render:
+
+- `data/chroma/` is git-ignored, so the first build creates the vector DB from
+  scratch; the Build Command's `python app/ingest.py --rebuild` re-does it on
+  every deploy (deliberate — guarantees fresh vectors).
+- Ingestion is fully offline on Render: the corpus lives in `data/raw/*.txt`
+  (committed) and the MiniLM embedder is local. The only downloads at build time
+  are pip packages and the ~90 MB HuggingFace model (cached inside the container).
+- The `retrieved_on` freshness stamp is read from `sources.csv`, which is
+  committed, so it stays accurate.
+- Paste the key directly into the dashboard input — do not paste it into chat or
+  commit it.
