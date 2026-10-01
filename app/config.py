@@ -21,8 +21,8 @@ GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
 GROQ_API_KEY_ENV = "GROQ_API_KEY"
 
 # --- retrieval ---------------------------------------------------------------
-TOP_K = 5            # when the question names a scheme, we scope to it
-TOP_K_GENERIC = 8    # scheme-less question: all 5 schemes compete, so widen
+TOP_K = 10            # context window: retrieve up to 10 chunks per question
+TOP_K_GENERIC = TOP_K  # kept as a separate constant so the adaptive-k logic reads plainly
 MIN_SIM = 0.22       # cosine floor; below this we say "not in the sources"
 
 # Sections that define terms rather than state scheme facts - never cite these
@@ -33,7 +33,7 @@ NON_CITABLE_SECTIONS = {"Glossary (Understand terms)"}
 # 900 chars (~225 tokens). Sized after inspecting the pages: it is large enough to
 # hold a whole "About the scheme" block (objective + risk + minimums + benchmark
 # for one scheme) so the benchmark is not orphaned in a second chunk, and small
-# enough that top-5 retrieval does not dump a whole page into the prompt.
+# enough that top-10 retrieval does not dump a whole page into the prompt.
 CHUNK_CHARS = 900
 CHUNK_OVERLAP_CHARS = 140
 

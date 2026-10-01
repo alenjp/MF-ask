@@ -192,9 +192,9 @@ question and context are clean.
 ### 4.2 Retrieval
 
 - Same MiniLM model encodes the question; cosine top-k from Chroma.
-- **Adaptive k.** `k = 5` when the question names a scheme (we scope to it), `k = 8`
-  when it does not — a scheme-less question competes against all 5 schemes' chunks,
-  and 5 was not enough to surface the stamp-duty/tax block.
+- **Context window.** The last-10-chunks window (`TOP_K` = `TOP_K_GENERIC` = 10) is
+  what reaches the LLM. Scoping still trims it to the named scheme; with a single
+  fixed window the old `5`/`8` adaptive-k split is no longer needed.
 - **Scheme scoping.** `detect_scheme()` matches aliases from `config.SCHEME_ALIASES`
   (`large cap`, `flexi cap`, `elss` / `tax saver`, `small cap`, `balanced
   advantage`) and filters the hits to that scheme. If scoping would empty the

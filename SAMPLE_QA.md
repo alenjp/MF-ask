@@ -24,21 +24,21 @@ Corpus: 5 public HDFC Mutual Fund scheme pages (see `sources.csv`), 36 chunks. L
 
 ### `What is the exit load on HDFC Small Cap Fund Direct Growth?`
 
-**Answer (answer):** HDFC Small Cap Fund (Direct Growth) has an exit load of 1% if redeemed within 1 year.
+**Answer (answer):** HDFC Small Cap Fund Direct Growth has an exit load of 1% if redeemed within 1 year.
 
 **Source:** [HDFC Small Cap Fund (Direct Growth) - Exit load & charges](https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth)
 
 
 ### `What is the benchmark of HDFC Flexi Cap Fund Direct Growth?`
 
-**Answer (answer):** The benchmark for HDFC Flexi Cap Fund Direct Growth is the NIFTY 500 Total Return Index.
+**Answer (answer):** The fund benchmark for HDFC Flexi Cap Direct Plan Growth is the NIFTY 500 Total Return Index.
 
 **Source:** [HDFC Flexi Cap Fund (Direct Growth) - About the scheme](https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth)
 
 
 ### `What is the risk category / riskometer level of HDFC Balanced Advantage Fund?`
 
-**Answer (answer):** HDFC Balanced Advantage Fund Direct Growth is rated Very High risk.
+**Answer (answer):** HDFC Balanced Advantage Fund Direct Growth is rated as Very High risk.
 
 **Source:** [HDFC Balanced Advantage Fund (Direct Growth) - About the scheme](https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth)
 
@@ -52,7 +52,7 @@ Corpus: 5 public HDFC Mutual Fund scheme pages (see `sources.csv`), 36 chunks. L
 
 ### `What is the stamp duty and tax implication on redemption?`
 
-**Answer (answer):** For HDFC ELSS Tax Saver Fund (Direct Plan Growth), HDFC Small Cap Fund (Direct Growth), HDFC Balanced Advantage Fund (Direct Growth), HDFC Flexi Cap Fund (Direct Growth), and HDFC Large Cap Fund (Direct Growth), the stamp duty on investment is 0.005% from July 1st, 2020. If redeemed within one year, returns are taxed at 20%, while returns exceeding Rs 1.25 lakh in a financial year after one year are taxed at 12.5%.
+**Answer (answer):** For HDFC ELSS Tax Saver Fund (Direct Plan Growth), HDFC Small Cap Fund (Direct Growth), HDFC Balanced Advantage Fund (Direct Growth), HDFC Flexi Cap Fund (Direct Growth), and HDFC Large Cap Fund (Direct Growth), the stamp duty on investment is 0.005% from July 1st, 2020. If you redeem within one year, returns are taxed at 20%, and if you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
 
 **Source:** [HDFC ELSS Tax Saver Fund (Direct Plan Growth) - Exit load, stamp duty & tax](https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth)
 

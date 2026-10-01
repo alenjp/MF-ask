@@ -82,7 +82,7 @@ Optional: `python app\evaluate.py` runs 12 smoke-test queries and regenerates
 1. Open the app. Sidebar shows *"Indexed 36 chunks from 5 public HDFC scheme
    pages"*. Point at the pipeline diagram in §5.
 2. Click the example button **"What is the expense ratio of HDFC Large Cap Fund
-   Direct Growth?"** → grounded answer + one Groww link + top-5 chunks in the
+   Direct Growth?"** → grounded answer + one Groww link + top-10 chunks in the
    expander.
 3. Type **"What is the lock-in period for HDFC ELSS Tax Saver Fund?"** → honest
    miss ("Not stated in the sources I have"). This is the beat that proves it
@@ -112,7 +112,7 @@ Optional: `python app\evaluate.py` runs 12 smoke-test queries and regenerates
   question
       │  guards: PII -> advice -> performance        (before any LLM call)
       ▼
-  app/rag.py  retrieve()           EMBED question, cosine top-5 from Chroma
+  app/rag.py  retrieve()           EMBED question, cosine top-10 from Chroma
       │
       ▼  context blocks + system prompt
   Groq (temperature 0.0)            GENERATE <= 3 sentences, no URL in text
@@ -154,7 +154,7 @@ Decisions:
 | Parameter | Value | Why |
 |-----------|-------|-----|
 | Split unit | single line | keeps `label` and `value` adjacent |
-| Chunk size | **900 characters** (~225 tokens) | 700 orphaned each scheme's benchmark into a second, weaker-ranked chunk, so the query never retrieved it. 900 holds a whole *About the scheme* block (objective + risk + minimums + benchmark for one scheme) while still keeping top-5 retrieval well under one page |
+| Chunk size | **900 characters** (~225 tokens) | 700 orphaned each scheme's benchmark into a second, weaker-ranked chunk, so the query never retrieved it. 900 holds a whole *About the scheme* block (objective + risk + minimums + benchmark for one scheme) while still keeping top-10 retrieval at a reasonable prompt size |
 | Overlap | **140 characters**, block-granular | re-emits the *last whole lines* of the previous chunk, so overlap never cuts mid-label |
 | Boundary | detected headings flush the buffer | each chunk is one readable section |
 | Dropped | Holdings, Return calculator, Returns/rankings, Compare-similar, Fund-management link lists | out of scope; keeping them let 87/132 chunks be portfolio noise that crowded out the fee facts |
@@ -216,7 +216,7 @@ configured"*. Add a key to `.env` and restart to get the real Groq answers.
 6. **Groww is a distributor, not the AMC.** The brief said "AMC/SEBI/AMFI"; the
    five URLs supplied are Groww pages. For a production build, swap the loader
    to `hdfcfund.com` factsheets / KIM / SID PDFs and AMFI NAV data.
-7. **Reranking is not used** — plain cosine top-5. On a 41-chunk corpus that is
+7. **Reranking is not used** — plain cosine top-10. On a 41-chunk corpus that is
    fine; it would need a cross-encoder at a few thousand chunks.
 8. **Extractive fallback quality is poor** compared to the LLM path. It exists
    so the demo is not dead without a key, not as a product feature.

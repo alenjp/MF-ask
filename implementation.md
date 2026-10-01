@@ -170,7 +170,7 @@ chunks**, and a human-readable dump.
 **The three decisions that were made by testing — implement them deliberately:**
 
 1. **900 not 700.** At 700, a scheme's *About the scheme* block splits and the
-   benchmark line is orphaned into a chunk that never ranks top-5. 900 keeps
+   benchmark line is orphaned into a chunk that never ranks in the top-10. 900 keeps
    objective + risk + minimums + benchmark together.
 2. **Sub-headings must not demote the parent section.** The pages repeat a bare
    parent heading *inside* a subsection: `Exit load`, then
@@ -251,8 +251,8 @@ python -c "import chromadb; c=chromadb.PersistentClient(path='data/chroma'); pri
    | 0b | Advice | "should I buy", "which fund is best", "recommend", "book profit", "exit my investment", "help me choose", … → `NO_ADVICE_REPLY` + `EDUCATION_LINK`; retrieval never runs |
    | 0c | Performance | "5 year returns vs category", "expected return", "CAGR", "outperform", "how much will I make", … → refuse, point at the official factsheet/fund page |
 2. **Retrieval:** question embedded with the cached Phase-3 model; cosine top-k.
-   Adaptive k: `k=5` when a scheme is detected, `k=8` when not (a scheme-less
-   question competes against all five schemes).
+   Context window of 10 chunks for every question (`TOP_K` = `TOP_K_GENERIC` = 10);
+   a scheme-less question competes against all five schemes.
 3. **Scheme scoping** — the bug that shaped the design (architecture.md §4.3).
    `detect_scheme()` matches `SCHEME_ALIASES`; if a scheme is found, filter hits
    to that scheme. If scoping would empty the result set, fall back to unscoped.
@@ -263,7 +263,7 @@ python -c "import chromadb; c=chromadb.PersistentClient(path='data/chroma'); pri
 **Acceptance check** — hit the Chroma console before writing any prompt code:
 
 ```powershell
-python -c "import sys; sys.path.insert(0,'app'); from rag import detect_scheme, retrieve; q='What is the exit load on HDFC Small Cap Fund Direct Growth?'; print(detect_scheme(q)); [print(h.scheme) for h in retrieve(q,k=5)]"
+python -c "import sys; sys.path.insert(0,'app'); from rag import detect_scheme, retrieve; q='What is the exit load on HDFC Small Cap Fund Direct Growth?'; print(detect_scheme(q)); [print(h.scheme) for h in retrieve(q, k=10)]"
 ```
 
 All 5 returned schemes must be the Small Cap one. Repeat with the Flexi Cap
