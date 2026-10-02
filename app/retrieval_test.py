@@ -1,14 +1,16 @@
 import sys
+from pathlib import Path
 
-APP = r"C:\Users\User\build hour27 sept\app"
+APP = str(Path(__file__).resolve().parent)
 if APP not in sys.path:
     sys.path.insert(0, APP)
 
 from rag import retrieve, detect_scheme, ask  # noqa: E402
+from config import TOP_K, TOP_K_GENERIC  # noqa: E402
 
 q = sys.argv[1]
-k = int(sys.argv[2]) if len(sys.argv) > 2 else 5
-k = k if detect_scheme(q) else 8
+k = int(sys.argv[2]) if len(sys.argv) > 2 else (TOP_K if detect_scheme(q) else TOP_K_GENERIC)
+k = TOP_K if detect_scheme(q) else TOP_K_GENERIC
 
 print(f"Q: {q}")
 print(f"detect_scheme -> {detect_scheme(q)}")
