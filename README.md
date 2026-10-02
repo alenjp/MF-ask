@@ -242,7 +242,7 @@ Blueprints → **New** → **Web Service** → connect this repo → set the fol
 | **Runtime** | Python (native) |
 | **Root Directory** | `.` (repo root — paths are resolved from the app files, not the CWD) |
 | **Build Command** | `pip install -r requirements.txt && python app/ingest.py --rebuild` |
-| **Start Command** | `streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0` |
+| **Start Command** | `python app/ingest.py && streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0` |
 | **Health Check Path** | `/` (leave default) |
 | **Instance Type** | Free is fine for the demo |
 
@@ -259,7 +259,10 @@ How the pieces work on Render:
 
 - `data/chroma/` is git-ignored, so the first build creates the vector DB from
   scratch; the Build Command's `python app/ingest.py --rebuild` re-does it on
-  every deploy (deliberate — guarantees fresh vectors).
+  every deploy (deliberate — guarantees fresh vectors). The Start Command runs
+  `python app/ingest.py` first: it **skips in ~0s when the collection is already
+  populated**, and rebuilds it if the running instance ever sees an empty (or
+  since-redeployed) filesystem. Either way the app never shows an empty store.
 - Ingestion is fully offline on Render: the corpus lives in `data/raw/*.txt`
   (committed) and the MiniLM embedder is local. The only downloads at build time
   are pip packages and the ~90 MB HuggingFace model (cached inside the container).
