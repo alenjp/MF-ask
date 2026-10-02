@@ -51,7 +51,7 @@ written artefacts listed in §9.
 5. **No performance claims** — never compute, compare or forecast returns; link the
    official factsheet instead.
 6. **Honest misses** — say "not stated in the sources" rather than invent.
-7. **Tiny UI**: welcome line, 3 example questions, "Facts-only. No investment advice."
+7. **Tiny UI**: welcome line, 5 example questions, "Facts-only. No investment advice."
 8. **Freshness stamp**: `Last updated from sources: <date>`.
 9. One-command local run for a presenter.
 
@@ -102,7 +102,7 @@ Machine-readable list: `sources.csv`. Retrieved **2026-09-29**.
 | FR-9 | Refuse PII (PAN, Aadhaar, account, OTP, email, phone); store nothing | P0 | Done |
 | FR-10 | Make no performance claims; point at the official factsheet | P0 | Done |
 | FR-11 | Say "not stated in the sources" rather than hallucinate | P0 | Done |
-| FR-12 | UI: welcome line, 3 example questions, "Facts-only. No investment advice." | P1 | Done |
+| FR-12 | UI: welcome line, 5 example questions, "Facts-only. No investment advice." | P1 | Done |
 | FR-13 | Show `Last updated from sources:` on every answer | P1 | Done |
 | FR-14 | Show corpus status ("indexed N chunks from M pages") | P1 | Done |
 | FR-15 | Show retrieved context so grounding is inspectable | P1 | Done |

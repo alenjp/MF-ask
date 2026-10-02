@@ -351,8 +351,8 @@ freshness stamp, corpus status, inspectable context.
 2. Sidebar: corpus status (`Indexed **{n_chunks}** chunks from **5** public HDFC
    scheme pages`), model name `GROQ_MODEL` from config, key warning if `GROQ_API_KEY`
    is missing, the `DISCLAIMER` caption.
-3. Chat: welcome line, three example buttons (expense ratio, lock-in, advice
-   refusal), each user message appended with role + content.
+3. Chat: welcome line, five example buttons (expense ratio, min SIP, lock-in,
+   advice refusal, PII refusal), each user message appended with role + content.
 4. Every answer footer: `Last updated from sources: <retrieved_on>`.
 5. Grounded answers render the **one source link** from `hit.metadata.source_url`
    (never from the model text) and a `st.expander` of the retrieved context

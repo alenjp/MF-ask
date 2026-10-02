@@ -1,7 +1,7 @@
 """
 Tiny chat UI:  streamlit run app/app.py
 
-Welcome line + 3 example questions + "Facts-only. No investment advice."
+Welcome line + 5 quick question buttons + "Facts-only. No investment advice."
 """
 
 from __future__ import annotations
@@ -20,11 +20,14 @@ from rag import Answer, ask, best_citation, index_ready
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Examples chosen to demo grounded hit, honest miss, and advice refusal.
+# Examples chosen to demo a grounded hit, an honest miss, an advice refusal,
+# and a PII refusal, plus a second grounded hit.
 EXAMPLES = [
     "What is the expense ratio of HDFC Large Cap Fund Direct Growth?",
+    "What is the minimum SIP amount for HDFC ELSS Tax Saver Fund Direct Plan Growth?",
     "What is the lock-in period for HDFC ELSS Tax Saver Fund?",
     "Should I buy HDFC Small Cap Fund for my portfolio?",
+    "My PAN is ABCDE1234F - what is the exit load?",
 ]
 
 ICONS = {

@@ -130,7 +130,7 @@ Optional: `python app\evaluate.py` runs 12 smoke-test queries and regenerates
 | `app/chunking.py` | **CHUNK** — section-aware packing + `data/chunks.txt` dump |
 | `app/ingest.py` | **EMBED + STORE** — MiniLM vectors into persistent Chroma |
 | `app/rag.py` | guards + **RETRIEVE** + **GENERATE** + citation assembly |
-| `app/app.py` | Streamlit UI (welcome line, 3 examples, disclaimer) |
+| `app/app.py` | Streamlit UI (welcome line, 5 quick questions, disclaimer) |
 | `app/evaluate.py` | 12-query smoke test, writes `SAMPLE_QA.md` |
 | `sources.csv` | the 5 source URLs |
 | `data/chunks.txt` | every chunk, inspectable before embedding |
