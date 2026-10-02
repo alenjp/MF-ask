@@ -86,9 +86,10 @@ with st.sidebar:
         st.error("Vector store is empty. Run `python app/ingest.py` in a terminal.")
     st.markdown("### LLM")
     if has_key:
-        st.success("GROQ_API_KEY loaded from .env")
+        st.success("GROQ_API_KEY loaded from environment")
     else:
-        st.error("GROQ_API_KEY missing - retrieval works, generation is disabled.")
+        st.error("GROQ_API_KEY missing - retrieval works, generation is disabled. "
+                 "Add it in Render → Environment, then redeploy.")
     st.caption(f"Model: {GROQ_MODEL}")
     st.markdown("### Data handling")
     st.caption(
